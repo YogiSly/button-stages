@@ -1,0 +1,47 @@
+.container-stages {
+  width: 600px;
+  display: flex;
+}
+.step_start,
+.step_middle,
+.step_end {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  width: 100%;
+  justify-content: center;
+  background-color: #007BFF;
+  color: #ffffff;
+  height: 27px;
+  position: relative;
+  padding: 0 15px;
+  margin-right: 20px;
+}
+.step_start {
+  border-radius: 5px 0 0 5px;
+}
+.step_end {
+  border-radius: 0 5px 5px 0;
+}
+
+.step_start::after,
+.step_middle::after {
+  content: '';
+  background-image: url(/start.svg);
+  width: 17px;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  right: -16px;
+}
+
+.step_end::before,
+.step_middle::before {
+  content: '';
+  background-image: url(/end.svg);
+  width: 17px;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  left: -16px;
+}
